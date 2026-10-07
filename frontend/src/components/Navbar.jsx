@@ -25,9 +25,9 @@ export const Navbar = () => {
         Blog App
       </Link>
 
-      <div className="flex items-center gap-4">
-        <Link to="/" className="text-gray-600 hover:text-gray-900">
-          Inicio
+      <div className="flex items-center gap-6">
+        <Link to="/" className="text-gray-600 hover:text-gray-900 px-2">
+        Inicio
         </Link>
         <button
           onClick={manejarCierreSesion}

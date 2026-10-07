@@ -3,7 +3,7 @@ import { useFetch } from "../hooks/useFetch";
 
 export const HomePage = () => {
   const { datos: articulos, cargando, error } = useFetch(
-    "http://localhost:3001/api/articles"
+    "http://localhost:3000/api/articles"
   );
 
   

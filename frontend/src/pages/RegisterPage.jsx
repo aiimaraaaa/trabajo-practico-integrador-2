@@ -2,18 +2,17 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { useForm } from "../hooks/useForm";
 
-
 export const RegisterPage = () => {
   const navegar = useNavigate();
 
   const { formulario, manejarCambio, reiniciarFormulario } = useForm({
-    name: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     username: "",
     email: "",
     password: "",
   });
- 
+
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState("");
   const [erroresValidacion, setErroresValidacion] = useState([]);
@@ -26,7 +25,7 @@ export const RegisterPage = () => {
 
     try {
       const respuesta = await fetch(
-        "http://localhost:3001/api/auth/register",
+        "http://localhost:3000/api/auth/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -37,7 +36,6 @@ export const RegisterPage = () => {
 
       const datos = await respuesta.json();
 
-      
       if (respuesta.status === 400) {
         if (Array.isArray(datos)) {
           setErroresValidacion(datos);
@@ -52,7 +50,6 @@ export const RegisterPage = () => {
         return;
       }
 
-      
       reiniciarFormulario();
       navegar("/login");
     } catch {
@@ -73,8 +70,8 @@ export const RegisterPage = () => {
           <span className="text-sm text-gray-600">Nombre</span>
           <input
             type="text"
-            name="name"
-            value={formulario.name}
+            name="firstName"
+            value={formulario.firstName}
             onChange={manejarCambio}
             required
             className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -85,8 +82,8 @@ export const RegisterPage = () => {
           <span className="text-sm text-gray-600">Apellido</span>
           <input
             type="text"
-            name="lastname"
-            value={formulario.lastname}
+            name="lastName"
+            value={formulario.lastName}
             onChange={manejarCambio}
             required
             className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -129,7 +126,6 @@ export const RegisterPage = () => {
           />
         </label>
 
-        {/* Errores de validación devueltos por express-validator */}
         {erroresValidacion.length > 0 && (
           <ul className="text-red-500 text-sm list-disc pl-5">
             {erroresValidacion.map((err, indice) => (
