@@ -1,16 +1,45 @@
-# React + Vite
+# Trabajo Práctico Integrador N° II
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend con **React + Vite** para el backend del **Trabajo Práctico Integrador N° I**.
 
-Currently, two official plugins are available:
+## Requisitos previos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- El backend del TPI N° I corriendo en `http://localhost:3000`
 
-## React Compiler
+## Cómo levantar el proyecto
+### 1. Clonar el repositorio
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+git clone https://github.com/aiimaraaaa/trabajo-practico-integrador-2.git
 
-## Expanding the ESLint configuration
+cd trabajo-practico-integrador-2/frontend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Instalar dependencias
+
+npm install
+
+### 3. Levantar el servidor de desarrollo
+
+npm run dev
+
+El frontend va a estar disponible en: **http://localhost:5173**
+
+## Backend utilizado
+Este frontend consume la API del **Trabajo Práctico Integrador N° I**.
+
+**URL del repositorio del backend:**
+
+https://github.com/aiimaraaaa/trabajo-practico-integrador-1
+
+**El backend debe estar corriendo en:** `http://localhost:3000`
+
+### Cómo levantar el backend
+
+git clone https://github.com/aiimaraaaa/trabajo-practico-integrador-1.git
+
+cd trabajo-practico-integrador-1
+
+npm install
+
+npm run dev
+
+El backend va a estar disponible en: **http://localhost:3000**
