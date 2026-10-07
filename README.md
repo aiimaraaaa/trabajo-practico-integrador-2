@@ -1,6 +1,5 @@
 # Trabajo Práctico Integrador N° II
-
-Frontend con **React + Vite** para el backend del **Trabajo Práctico Integrador N° I**.
+
 
 ## Requisitos previos
 
