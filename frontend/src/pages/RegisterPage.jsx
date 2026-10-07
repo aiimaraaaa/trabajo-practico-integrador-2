@@ -13,7 +13,7 @@ export const RegisterPage = () => {
     email: "",
     password: "",
   });
-
+ 
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState("");
   const [erroresValidacion, setErroresValidacion] = useState([]);
